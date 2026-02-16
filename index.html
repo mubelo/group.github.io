@@ -1,204 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Mubelo Group</title>
-
-<style>
-:root {
-  --dark-blue: #0b2c55;
-  --orange: #ff7a00;
-  --light-blue: #1e90ff;
-  --white: #ffffff;
-  --glass-bg: rgba(255, 255, 255, 0.15);
-  --glass-border: rgba(255, 255, 255, 0.25);
-  --shadow: rgba(0, 0, 0, 0.1);
-}
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(135deg, var(--dark-blue), #082040);
-  color: var(--white);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 20px;
-  overflow-x: hidden;
-}
-
-.container {
-  text-align: center;
-  max-width: 500px;
-  width: 90%;
-}
-
-h1 {
-  margin-bottom: 40px;
-  font-size: 28px;
-  letter-spacing: 1px;
-  font-weight: 700;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
-}
-
-/* Glassmorphism card */
-.company-card {
-  background: var(--glass-bg);
-  border-radius: 20px;
-  padding: 30px 20px 40px;
-  margin: 20px 0;
-  box-shadow: 0 8px 32px var(--shadow);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--glass-border);
-  color: var(--white);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 0;
-  transform: translateY(20px);
-  animation-fill-mode: forwards;
-  animation-duration: 0.8s;
-  animation-timing-function: ease-out;
-}
-
-.company-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 16px 48px var(--shadow);
-}
-
-.company-card:nth-child(2) {
-  animation-name: fadeInUp;
-  animation-delay: 0.2s;
-}
-
-.company-card:nth-child(3) {
-  animation-name: fadeInUp;
-  animation-delay: 0.4s;
-}
-
-/* Mubelo card initial animation */
-.company-card:nth-child(1) {
-  animation-name: fadeInUp;
-  animation-delay: 0s;
-}
-
-/* Animation keyframes */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.logo {
-  width: 180px;
-  max-width: 80%;
-  margin-bottom: 12px;
-  filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.2));
-}
-
-/* Slogan style */
-.slogan {
-  font-size: 14px;
-  font-weight: 500;
-  font-style: italic;
-  color: rgba(255 255 255 / 0.8);
-  margin-bottom: 20px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
-}
-
-/* Buttons */
-.btn {
-  display: inline-block;
-  padding: 14px 30px;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 16px;
-  transition: 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  user-select: none;
-}
-
-.btn-mubelo {
-  background: var(--orange);
-  color: var(--white);
-  border: none;
-}
-
-.btn-mubelo:hover {
-  background: #e66a00;
-  box-shadow: 0 6px 20px rgba(230, 106, 0, 0.7);
-}
-
-.btn-sunbot {
-  background: var(--light-blue);
-  color: var(--white);
-  border: none;
-}
-
-.btn-sunbot:hover {
-  background: #167ad1;
-  box-shadow: 0 6px 20px rgba(22, 122, 209, 0.7);
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  body {
-    padding: 40px 0;
-  }
-  .logo {
-    width: 140px;
-  }
-}
-</style>
-</head>
-
-<body>
-  <div class="container">
-    <h1>Mubelo Group</h1>
-
-    <!-- Mubelo -->
-    <div class="company-card">
-      <img
-        src="images/mubelo-logo.png"
-        alt="Mubelo Logo"
-        class="logo"
-        loading="lazy"
-      />
-      <div class="slogan">Your quality solution provider</div>
-      <a
-        href="https://mubelo.github.io/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="btn btn-mubelo"
-        >Visit Mubelo Electrical Ltd</a
-      >
-    </div>
-
-    <!-- Sunbot -->
-    <div class="company-card">
-      <img
-        src="images/sunbot-logo.png"
-        alt="Sunbot Logo"
-        class="logo"
-        loading="lazy"
-      />
-      <div class="slogan">Sustainable Energy and Smart Automation</div>
-      <a
-        href="https://sunbot-ltd.github.io/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="btn btn-sunbot"
-        >Visit Sunbot Engineering Services Ltd</a
-      >
-    </div>
+<!-- Mubelo -->
+<div class="company-card">
+  <img
+    src="images/mubelo-logo.png"
+    alt="Mubelo Logo"
+    class="logo"
+    loading="lazy"
+  />
+  <!-- Full company name added -->
+  <div class="full-name" style="font-weight: 600; font-size: 16px; margin-bottom: 6px;">
+    Mubelo Electrical Ltd
   </div>
-</body>
-</html>
+  <div class="slogan">Your quality solution provider</div>
+  <a
+    href="https://mubelo.github.io/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="btn btn-mubelo"
+    >Visit Mubelo Electrical Ltd</a
+  >
+</div>
 
+<!-- Sunbot -->
+<div class="company-card">
+  <img
+    src="images/sunbot-logo.png"
+    alt="Sunbot Logo"
+    class="logo"
+    loading="lazy"
+  />
+  <!-- Full company name added -->
+  <div class="full-name" style="font-weight: 600; font-size: 16px; margin-bottom: 6px;">
+    Sunbot Engineering Services Ltd
+  </div>
+  <div class="slogan">Sustainable Energy and Smart Automation</div>
+  <a
+    href="https://sunbot-ltd.github.io/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="btn btn-sunbot"
+    >Visit Sunbot Engineering Services Ltd</a
+  >
+</div>
